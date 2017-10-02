@@ -1,0 +1,32 @@
+{% extends "home/header.html" %}
+
+
+{% block content %}
+
+{% load static %}
+
+<section class="register-section">
+  <header>
+    <h2>Register</h2>
+  </header>
+  {% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+  {% endif %}
+  <form class="register_form" action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for field in form %}
+      <div class="">
+        <span>{{ field.error }}</span>
+      </div>
+      <label for="">{{field.label_tag}}</label>
+      <div class="">
+        {{field}}
+      </div>
+    {% endfor %}
+    <div class="">
+      <button type="submit" name="submit_form">Register</button>
+    </div>
+  </form>
+</section>
+
+{% endblock %}

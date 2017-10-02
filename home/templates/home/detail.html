@@ -1,0 +1,59 @@
+{% extends "home/header.html" %}
+
+{% load static %}
+{% block content %}
+
+
+
+
+<section class="recipe-detail">
+    <header class="title-recipe-detail">
+        <h2>{{ recipe.recipe_title}}</h2>
+    </header>
+    <p>{{ recipe.description_one|safe|linebreaks}}</p>
+    <img style="width:100%" src="{{ recipe.image_one.url }}" alt="">
+    <p>{{ recipe.description_two|safe|linebreaks }}</p>
+    <img style="width:100%" src="{{ recipe.image_two.url }}" alt="">
+    <p>{{recipe.description_three|safe|linebreaks }}</p>
+    <img style="width:100%" src="{{ recipe.image_three.url }}" alt="">
+    <p>{{ recipe.description_four|safe|linebreaks }}</p>
+
+    <section class="intruction-recipe">
+        <header>
+            <h2>{{recipe.recipe_title}}</h2>
+        </header>
+        <div class="serves">
+            <p>Serves: </p>
+            <span>{{recipe.serves}}</span>
+        </div>
+        <div class="serves">
+            <p>Prep time: </p>
+            <span>{{ recipe.prep_time }}</span>
+        </div>
+        <div class="serves">
+            <p>Cook time: </p>
+            <span>{{recipe.cook_time}}</span>
+        </div>
+        <div class="serves">
+            <p>Total time: </p>
+            <span>{{recipe.total_time}}</span>
+        </div>
+        <div class="ingredients">
+            <h3>ingredients</h3>
+            <ul>
+                {{ recipe.ingredients|safe }}
+            </ul>
+        </div>
+        <div class="instructions">
+            <h3>intructions</h3>
+            <ul>
+                {{ recipe.instructions|safe }}
+            </ul>
+        </div>
+    </section>
+
+</section>
+
+
+
+{% endblock %}

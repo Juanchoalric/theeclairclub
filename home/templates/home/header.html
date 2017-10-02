@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Happily Wheatless</title>
+  	<link rel="stylesheet" href="{% static 'home/css/styles.css' %}" type = "text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body style="background-image: url('{% static 'home/img/seigaiha.png' %}')">
+    <header class="site-header">
+      <img src=" {% static 'home/img/logo.png' %}" alt="The logo of the main page">
+      <div class="hamburger-icon">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </div>
+      <nav class="top-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{% url 'category:categories' %}">recipe world</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">register</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article class="main-container">
+
+    {% block content %}
+    {% endblock %}
+
+    </article>
+    <aside>
+      <section class="profile-admin">
+        <div>
+          <img style="width:250px;border-radius:100%;" src="{% static 'home/img/jaci.jpg' %}" alt=""/>
+        </div>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+      </section>
+    </aside>
+  <footer>
+    <nav class="bottom-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About me</a></li>
+        <li><a href="#">Recipe world</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav>
+  </footer>
+  </body>
+</html>

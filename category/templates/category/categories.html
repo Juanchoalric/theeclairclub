@@ -1,0 +1,22 @@
+{% extends "home/header.html" %}
+
+
+{% block content %}
+
+{% load static %}
+{% for category in all_categories %}
+<section class="category-section">
+  <header class="header-category">
+    <h2><a href="#">{{category.category_title}}</a></h2>
+  </header>
+  {% for recipe in category.recipe_set.all %}
+  <div class="categories-recipe">
+    <header>
+      <h2><a href="/{{recipe.id}}/">{{recipe.recipe_title}}</a></h2>
+    </header>
+    <img style="width:100%;" src="{% static 'home/img/recipe1.jpg' %}" alt="">
+  </div>
+  {% endfor %}
+</section>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css?family=Noticia+Text');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin:auto;
+  font-size: 10px;
+  font-weight: 300;
+  padding:10px;
+  background-repeat: repeat;
+  color: #59595b;
+  font-family: 'Noticia Text', serif;
+}
+
+p{
+  font-size: 15px;
+}
+
+.fa .fa-bars{
+  font-size: 40px;
+  color: #59595b;
+}
+
+.site-header {
+  text-align: center;
+}
+
+.site-header img{
+  width: 200px;
+
+}
+
+.top-nav ul {
+  text-align: left;
+  padding-left: 0px;
+}
+
+.top-nav ul li{
+    list-style: none;
+    border-bottom: 1px solid #59595b;
+    padding: 10px 0px 10px 0px;
+}
+
+.top-nav ul li a{
+  text-decoration: none;
+  color: #59595b;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.top-nav ul li a:hover{
+  color: #e76785;
+}
+
+.main-container{
+  width: 100%;
+  overflow: hidden;
+  padding-bottom:20px;
+  padding: 8px;
+  background: #ffffff;
+}
+
+.container-article{
+    clear: both;
+}
+
+.title-recipe {
+  text-align: center;
+}
+
+.title-recipe h2 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 30px;
+  padding: 10px;
+  color: #e76785;
+  text-align: center;
+}
+
+.title-recipe h2 a{
+    text-decoration: none;
+    color: #e76785;
+}
+
+.image-width{
+  padding: 10px;
+  width : 100%;
+  display: inline-block;
+}
+
+.container-recipe p{
+  padding: 10px;
+  margin-top: 0px;
+  font-size: 15px;
+}
+
+.more-recipe{
+  padding-bottom: 20px;
+}
+
+.more-recipe a{
+  border : 2px #e76785 solid;
+  margin-left : 10px;
+  padding : 10px 15px;
+  font-size: 16px;
+  color: #e76785;
+  text-decoration: none;
+
+}
+
+.more-recipe a:hover{
+  background-color: #e76785;
+  color: #ffffff;
+
+}
+
+.sub-container-article{
+  width: 50%;
+  float: left;
+
+}
+
+.sub-container-article .title-recipe h2{
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.sub-container-article .more-recipe {
+  margin-top: 10px;
+}
+
+/*
+* === Footer ===
+*/
+
+footer {
+  height: 100px;
+  vertical-align: middle;
+
+}
+
+.bottom-nav ul{
+  text-align: center;
+  padding-left: 0;
+  line-height: 95px;
+}
+
+.bottom-nav ul li {
+    float: center;
+    display: inline-block;
+    margin-left: 8px;
+}
+
+
+.bottom-nav ul li:first-child{
+  margin-left: 0;
+}
+
+.bottom-nav ul li a{
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+}
+
+.bottom-nav ul li a:hover{
+  color:#e76785;
+}
+
+/*
+* === Aside ===
+*/
+
+aside{
+  margin-top:20px;
+  padding-top:20px;
+  background-color: #ffffff;
+}
+
+.profile-admin div{
+   margin-top: 20px;
+   padding-top: 30px;
+   padding-bottom: 20px;
+   text-align: center;
+}
+
+.profile-admin p{
+  font-size:16px;
+  padding: 0 10px 20px 10px;
+}
+
+.border-div{
+  border-top : 1px solid #59595b;
+  height:20px;
+}
+
+/*
+* === Detail-Recipe ===
+*/
+
+.title-recipe-detail{
+  text-align: center;
+}
+
+.title-recipe-detail{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 20px;
+  padding:10px;
+  color: #e76785;
+}
+
+.detail-p{
+  font-size: 15px;
+
+}
+
+.intruction-recipe{
+  padding: 10px;
+  margin: 10px;
+  background: rgb(255, 243, 246);
+}
+
+.intruction-recipe header {
+  text-align: center;
+  padding: 10px;
+}
+
+.intruction-recipe header h2 {
+  color: #e76785;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.serves p{
+  color: #e76785;
+  display: inline-block;
+}
+
+.serves span {
+  font-size: 15px;
+}
+
+.ingredients h3 {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #e76785;
+}
+
+.instructions h3 {
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #e76785;
+}
+
+.ingredients ul li{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.instructions ul {
+  list-style-type: upper-roman;
+}
+
+.instructions ul li {
+  font-size: 15px;
+  padding: 5px;
+}
+
+
+/*
+* === Categories ===
+*/
+
+.category-section {
+  overflow: hidden;
+}
+
+.header-category {
+  text-align: center;
+}
+
+.category-section header h2 a {
+  text-decoration: none;
+  color: #e76785;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 25px;
+}
+
+.category-section div {
+  width: 50%;
+  float: left;
+}
+
+.categories-recipe header h2 a{
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.category-section div img{
+  width:100%;
+}
+
+/*
+* === Login ===
+*/
+
+.login-section {
+  background-color: #e76785;
+}
+
+.login-section header{
+  text-align: center;
+}
+
+.login-section header h2 {
+
+}
+
+.login-form{
+  text-align: center;
+}

@@ -1,0 +1,67 @@
+{% extends "home/header.html" %}
+
+
+{% block content %}
+
+{% load staticfiles %}
+  <section class=login-section>
+    <header>
+      <h2>Login</h2>
+    </header>
+    <form class="login-form" action="" method="post">
+      <div class="username-div">
+        <label for="">Username</label>
+        <input type="text" name="" value="">
+      </div>
+      <div class="password-div">
+        <label for="">Password</label>
+        <input type="text" name="" value="">
+      </div>
+      <div class="login-div">
+        <button type="submit" name="button">Login</button>
+      </div>
+    </form>
+  </section>
+  <section class="container-recipe">
+    {% for recipe in all_recipes %}
+    <header class="title-recipe">
+      <h2><a href="/{{recipe.id}}/">{{ recipe.recipe_title }}</a></h2>
+    </header>
+    <div class="image-width">
+      {% load staticfiles %}
+      <img style="width:100%" src="{{ recipe.image_one.url }}" alt="">
+    </div>
+    <p>{{ recipe.description_one }}</p>
+    <div class="more-recipe">
+      <a href="/{{recipe.id}}/">More</a>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section class="sub-container-article">
+    <header class="title-recipe">
+      <h2><a href="/home/1">Slow Cooker Cranberry Apple Cobbler Recipe + VIDEO</a></h2>
+    </header>
+    <div class="image-width">
+      {% load staticfiles %}
+      <img style="width:100%" src="{% static '/home/img/recipe1.jpg' %}" alt="">
+    </div>
+    <div class="more-recipe">
+      <a href="#">More</a>
+    </div>
+  </section>
+
+  <section class="sub-container-article">
+    <header class="title-recipe">
+      <h2><a href="">Slow Cooker Cranberry Apple Cobbler Recipe + VIDEO</a></h2>
+    </header>
+    <div class="image-width">
+      {% load staticfiles %}
+      <img style="width:100%" src="{% static '/home/img/recipe1.jpg' %}" alt="">
+    </div>
+    <div class="more-recipe">
+      <a href="#">More</a>
+    </div>
+  </section>
+
+{% endblock %}
